@@ -30,3 +30,16 @@
 *.exe
 *.out
 *.app
+
+# Mac OS hidden file
+.DS_Store
+
+# Build directories
+build-*/
+debug/
+release/
+profile/
+Datasets/
+
+# Autosaves
+*~

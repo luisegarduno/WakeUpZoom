@@ -19,13 +19,16 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     main.cpp \
-    home.cpp
+    home.cpp \
+    settings.cpp \
 
 HEADERS += \
-    home.h
+    home.h \
+    settings.h \
 
 FORMS += \
-    home.ui
+    home.ui \
+    settings.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

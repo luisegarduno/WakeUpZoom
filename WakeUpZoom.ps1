@@ -32,7 +32,7 @@ while($choice -eq 'y'){
   # Print example of input format
   Write-Host('')
   Write-Host('(NOTE) For Course name, DO NOT use characters like \/:*?"><|', [environment]::newline) -ForegroundColor "DarkRed"
-  Write-Host('Example of VALID format: ') -ForegroundColor "Yellow"
+  Write-Host('Example of VALID format: ') -ForegroundColor "Green"
   Write-Host('Course name ---> : MATH 101 - Calc I') -ForegroundColor "Magenta"
   Write-Host('     > URL : https://zoom.us/j/123451231') -ForegroundColor "Magenta"
   Write-Host('     > Time : 10:30AM') -ForegroundColor "Magenta"

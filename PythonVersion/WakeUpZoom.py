@@ -30,13 +30,13 @@ else:
         # Print introduction message & create file named 'course.yer'
 	print("First time setting up? I got you.")
 	courses = open("course.yer", "w+")
-	os.system('cls' if os.name == 'nt' else 'clear')
 	time.sleep(1.5)
+	os.system('cls' if os.name == 'nt' else 'clear')
 
         # Ask user for input regarding total number of courses
 	num_courses = int(input("How many classes do you want to add? "))
-	os.system('cls' if os.name == 'nt' else 'clear')
 	time.sleep(1.5)
+	os.system('cls' if os.name == 'nt' else 'clear')
 
         # Print examples of accepted formatting for requested user input
 	print("Gotcha, here's some examples of the formatting")
@@ -57,8 +57,8 @@ else:
 		i += 1
 		routine.append(url + " @ " + clk + " every " + freq)
 
-	os.system('cls' if os.name == 'nt' else 'clear')
 	time.sleep(1)
+	os.system('cls' if os.name == 'nt' else 'clear')
 
         # Output courses
 	print("Here's the shit you gave me btw:")
@@ -66,8 +66,8 @@ else:
 		print("--> " + x)
 
 	print("\n\nCool you're done. If you move the python file, make sure to also move the courses file (in this folder: " + cwd)
-	os.system('cls' if os.name == 'nt' else 'clear')
 	time.sleep(1)
+	os.system('cls' if os.name == 'nt' else 'clear')
         
 	print("\n\n Once you run this program again, you'll be set!")
 	courses.close()

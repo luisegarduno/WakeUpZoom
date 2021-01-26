@@ -18,6 +18,7 @@ WakeUpZoom! is a PowerShell script that facilitates the task of having to keep u
 - Schedule as many Zoom meetings as you want!
 - Stayed up late & only need to use it once? You can specify the frequency (Once/Weekly)
 - PowerShell can be closed as soon as classes have been added!
+- Program only needs to be ran ONCE (if scheduling for weekly meetings)
 
 ## How to run WakeUpZoom!
 ### Method 1 :   

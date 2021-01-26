@@ -1,11 +1,3 @@
-# Create a task
-
-# Store the current working directory
-# $current_directory = Get-Location | select -ExpandProperty Path
-
-# Store 'course.yer' as variable
-# $file_data = Get-Content course.yer
-
 # Clear terminal screen
 cls
 
@@ -20,7 +12,7 @@ $art = ('
             $$  /   \$$ |\$$$$$$$ |$$ | \$$\ \$$$$$$$\ \$$$$$$  |$$$$$$$  |$$$$$$$$\\$$$$$$  |\$$$$$$  |$$ | $$ | $$ |$$\ 
             \__/     \__| \_______|\__|  \__| \_______| \______/ $$  ____/ \________|\______/  \______/ \__| \__| \__|\__|
                                                                  $$ |                                                     
-                                                                 $$ |            Website ~ https://garduno.me                              
+                                                                 $$ |            Website ~ https://garduno.me             
                                                                  \__|                                                     ') 
 
 Write-Host $art -ForegroundColor "Blue"
@@ -42,4 +34,3 @@ while($course -eq 'y'){
 }
 
 cls
-

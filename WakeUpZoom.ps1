@@ -31,8 +31,9 @@ while($choice -eq 'y'){
 
   # Print example of input format
   Write-Host('')
-  Write-Host('Example of format: ') -ForegroundColor "DarkRed"
-  Write-Host('Course name ---> : Calc II') -ForegroundColor "Magenta"
+  Write-Host('(NOTE) For Course name, DO NOT use characters like \/:*?"><|', [environment]::newline) -ForegroundColor "DarkRed"
+  Write-Host('Example of VALID format: ') -ForegroundColor "Yellow"
+  Write-Host('Course name ---> : MATH 101 - Calc I') -ForegroundColor "Magenta"
   Write-Host('     > URL : https://zoom.us/j/123451231') -ForegroundColor "Magenta"
   Write-Host('     > Time : 10:30AM') -ForegroundColor "Magenta"
   Write-Host('     > Frequency (Once/Weekly) : Weekly') -ForegroundColor "Magenta"
@@ -80,6 +81,8 @@ while($choice -eq 'y'){
     if($freq -eq 'MW') { $trigger = New-ScheduledTaskTrigger -Weekly -DaysOfWeek $M,$W -At $clk }
     if($freq -eq 'MWF'){ $trigger = New-ScheduledTaskTrigger -Weekly -DaysOfWeek $M,$W,$F -At $clk }
     if($freq -eq 'TTH'){ $trigger = New-ScheduledTaskTrigger -Weekly -DaysOfWeek $T,$TH -At $clk }
+
+    $freq = '';
   }
 
   # Finally, register the task

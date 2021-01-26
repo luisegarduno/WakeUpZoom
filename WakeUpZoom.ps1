@@ -9,7 +9,8 @@
 # Clear terminal screen
 cls
 
-Write-Host('
+# Print ASCII Art
+$art = ('
             $$\      $$\           $$\                 $$\   $$\           $$$$$$$$\                                  $$\ 
             $$ | $\  $$ |          $$ |                $$ |  $$ |          \____$$  |                                 $$ |
             $$ |$$$\ $$ | $$$$$$\  $$ |  $$\  $$$$$$\  $$ |  $$ | $$$$$$\      $$  / $$$$$$\   $$$$$$\  $$$$$$\$$$$\  $$ |
@@ -19,23 +20,26 @@ Write-Host('
             $$  /   \$$ |\$$$$$$$ |$$ | \$$\ \$$$$$$$\ \$$$$$$  |$$$$$$$  |$$$$$$$$\\$$$$$$  |\$$$$$$  |$$ | $$ | $$ |$$\ 
             \__/     \__| \_______|\__|  \__| \_______| \______/ $$  ____/ \________|\______/  \______/ \__| \__| \__|\__|
                                                                  $$ |                                                     
-                                                                 $$ |                                                     
-                                                                 \__|                                                     ') -ForegroundColor "Blue"
+                                                                 $$ |            Website ~ https://garduno.me                              
+                                                                 \__|                                                     ') 
+
+Write-Host $art -ForegroundColor "Blue"
 
 $course = Read-Host -Prompt 'Would you like schedule a course? (y/n) '
 
 while($course -eq 'y'){
-  # Course Name
-  $crs = Read-Host -Prompt 'Course name ---> ' 
+  cls
+  Write-Host $art -ForegroundColor "Blue"
 
-  # Zoom URL
-  $url = Read-Host -Prompt '     > URL '
-  # Course start time
-  $clk = Read-Host -Prompt '     > Time '
-  # Course frequency 
-  $freq = Read-Host -Prompt '     > Frequency '
-  Write-Host('+ [' + $url + ' | ' + $clk + ' | ' + $freq + ']', [environment]::newline) -ForegroundColor "Green"
+  $crs = Read-Host -Prompt 'Course name ---> '    # Course name
+  $url = Read-Host -Prompt '     > URL '          # Zoom URL
+  $clk = Read-Host -Prompt '     > Time '         # Course start time
+  $freq = Read-Host -Prompt '     > Frequency '   # Course frequency
+
+  Write-Host('+ ' + $crs + ' [' + $url + ' | ' + $clk + ' | ' + $freq + ']', [environment]::newline) -ForegroundColor "Green"
 
   $course = Read-Host -Prompt 'Would you like to add another course? (y/n) '
 }
+
+cls
 

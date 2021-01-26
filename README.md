@@ -21,7 +21,7 @@ WakeUpZoom! is a PowerShell script that facilitates the task of having to keep u
 
 ## How to run WakeUpZoom!
 ### Method 1 :   
-1. Download the most recent release <a href="https://github.com/luisegarduno/WakeUpZoom/releases/tag/1.0" target="_top"><b>`here`</b></a>
+1. Download the most recent release <a href="https://github.com/luisegarduno/WakeUpZoom/releases/tag/1.1" target="_top"><b>`here`</b></a>
 2. After you've downloaded the file, right click on the file named `WakeUpZoom.ps1` and choose `Run with PowerShell`
 
 ### Method 2 :

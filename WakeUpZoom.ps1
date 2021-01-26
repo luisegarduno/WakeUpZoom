@@ -1,7 +1,7 @@
 # Clear terminal screen
 cls
 
-# Print ASCII Art
+# ASCII Art
 $art = ('
             $$\      $$\           $$\                 $$\   $$\           $$$$$$$$\                                  $$\ 
             $$ | $\  $$ |          $$ |                $$ |  $$ |          \____$$  |                                 $$ |
@@ -15,16 +15,21 @@ $art = ('
                                                                  $$ |            Website ~ https://garduno.me             
                                                                  \__|                                                     ') 
 
+# Print title
 Write-Host $art -ForegroundColor "Blue"
 
-Write-Host('Warning: MAKE SURE TO TEST IT BEFORE ACTUALLY USING IT') -ForegroundColor "Red"
+# Print warning
+Write-Host('Warning: MAKE SURE TO TEST IT BEFORE ACTUALLY USING IT (might need to sign into zoom)') -ForegroundColor "Red"
 
-$course = Read-Host -Prompt 'Would you like schedule a course? (y/n) '
+# Display question and save as `choice`
+$choice = Read-Host -Prompt 'Would you like schedule a course? (y/n) '
 
-while($course -eq 'y'){
-  cls
-  Write-Host $art -ForegroundColor "Blue"
+# Keep the looping until `choice` equals something other than 'y'
+while($choice -eq 'y'){
+  cls                                                         # Clear terminal screen
+  Write-Host $art -ForegroundColor "Blue"                     # Print title
 
+  # Print example of input format
   Write-Host('')
   Write-Host('Example of format: ') -ForegroundColor "DarkRed"
   Write-Host('Course name ---> : Calc II') -ForegroundColor "Magenta"
@@ -34,11 +39,14 @@ while($course -eq 'y'){
   Write-Host('          > What days? : TTH', [environment]::newline) -ForegroundColor "Magenta"
   Write-Host('')
 
+  # Ask user to input the necessary information
   $name = Read-Host -Prompt 'Course name ---> '               # Course name
   $url = Read-Host -Prompt '     > URL '                      # Zoom URL
   $clk = Read-Host -Prompt '     > Time '                     # Course start time
   $fq = Read-Host -Prompt '     > Frequency (Once/Weekly) '   # Course frequency
-  $M = 'Monday'; $T = 'Tuesday'; $W = 'Wednesday'; $TH = 'Thursday'; $F = 'Friday';
+
+
+  $M = 'Monday'; $T = 'Tuesday'; $W = 'Wednesday'; $TH = 'Thursday'; $F = 'Friday'; $freq;
 
   # Create shortcut on Desktop
   $WshShell = New-Object -comObject WScript.Shell
@@ -51,17 +59,19 @@ while($course -eq 'y'){
   # Task action : Execute the created shortcut 
   $action = New-ScheduledTaskAction -Execute $FilePath
 
-  $freq;
+  # If user select's to use the program once
   if($fq -eq 'Once')  {
 
-    # Task Trigger : Set the task to trigger on given time
+    # Task Trigger : Set the task to trigger once on given time
     $trigger = New-ScheduledTaskTrigger -Once -At $clk
   }
 
+  # If user select's to use the program weekly
   if($fq -eq 'Weekly'){
+    # Prompt user to specify days of week
     $freq = Read-Host -Prompt '          > What days?'
 
-    # Task Trigger : Set the task to trigger every week depending on the date & time
+    # Task Trigger : Set the task to trigger every week depending on the given date & time
     if($freq -eq 'M')  { $trigger = New-ScheduledTaskTrigger -Weekly -DaysOfWeek $M -At $clk }
     if($freq -eq 'T')  { $trigger = New-ScheduledTaskTrigger -Weekly -DaysOfWeek $T -At $clk }
     if($freq -eq 'W')  { $trigger = New-ScheduledTaskTrigger -Weekly -DaysOfWeek $W -At $clk }
@@ -75,10 +85,12 @@ while($course -eq 'y'){
   # Finally, register the task
   Register-ScheduledTask -TaskName $name -Action $action -Trigger $trigger
 
-
+  # Print out the information given
   Write-Host('+ ' + $name + ' [' + $url + ' | ' + $clk + ' | ' + $freq + ']', [environment]::newline) -ForegroundColor "Green"
 
-  $course = Read-Host -Prompt 'Would you like to add another course? (y/n) '
+  # Ask user if they would like to continue
+  $choice = Read-Host -Prompt 'Would you like to add another course? (y/n) '
 }
 
+# Clear screen when done :)
 cls

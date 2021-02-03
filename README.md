@@ -24,8 +24,9 @@ WakeUpZoom! is a PowerShell script that facilitates the task of having to keep u
 
 ## How to run WakeUpZoom!
 ### Method 1 (Easiest & Fastest) : 
-1. One-Click Download (<a href="https://github.com/luisegarduno/WakeUpZoom/releases/download/v1.3/WakeUpZoom.exe" target="_top"><b>`HERE`</b></a>) 
-2. Right click on the file `WakeUpZoom.exe` & choose `Run as Administrator`
+1. One-Click Download (<a href="https://github.com/luisegarduno/WakeUpZoom/releases/download/v1.3/WakeUpZoom.exe" target="_top"><b>`HERE`</b></a>)
+2. Right click on the file `WakeUpZoom.exe` & choose `Run as Administrator`   
+- Your computer might detect this as a virus because it's a `.exe` file, but just click on "Run Anyways".
 
 ### Method 2 :   
 1. Download the most recent release <a href="https://github.com/luisegarduno/WakeUpZoom/releases/tag/v1.3" target="_top"><b>`here`</b></a>

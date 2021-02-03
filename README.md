@@ -20,11 +20,20 @@ WakeUpZoom! is a PowerShell script that facilitates the task of having to keep u
 - PowerShell can be closed as soon as classes have been added!
 - Program only needs to be ran ONCE (if scheduling for weekly meetings)
 
+##### What's new?????   
+- Ability to delete scheduled Zoom Calls   
+- WakeUpZoom now has an executable! Making things extremly easier!
+
 ## How to run WakeUpZoom!
-### Method 1 :   
-1. Download the most recent release <a href="https://github.com/luisegarduno/WakeUpZoom/releases/tag/1.2" target="_top"><b>`here`</b></a>
+### Method 1 (Easiest & Fastest) : 
+1. One-Click Download <a href="https://github.com/luisegarduno/WakeUpZoom/releases/download/1.3/WakeUpZoom.exe" target="_top"><b>(`HERE`)</b></a> 
+2. Right click on the file `WakeUpZoom.exe` & choose `Run as Administrator`
+
+
+### Method 2 :   
+1. Download the most recent release <a href="https://github.com/luisegarduno/WakeUpZoom/releases/tag/1.3" target="_top"><b>`here`</b></a>
 2. After you've downloaded the file, right click on the file named `WakeUpZoom.ps1` and choose `Run with PowerShell`
 
-### Method 2 :
+### Method 3 :
 1. Open PowerShell as admin
 2. Run this command `git clone https://github.com/luisegarduno/WakeUpZoom.git ; cd WakeUpZoom; .\WakeUpZoom.ps1`

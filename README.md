@@ -8,9 +8,11 @@
     $$  /   \$$ |\$$$$$$$ |$$ | \$$\ \$$$$$$$\ \$$$$$$  |$$$$$$$  |$$$$$$$$\\$$$$$$  |\$$$$$$  |$$ | $$ | $$ |$$\ 
     \__/     \__| \_______|\__|  \__| \_______| \______/ $$  ____/ \________|\______/  \______/ \__| \__| \__|\__|
                                                          $$ |                                                     
-                                                         $$ |            Website ~ https://garduno.me             
+                                                         $$ |            Website ~ https://gardunos.tech             
                                                          \__|                                                     
 WakeUpZoom! is a PowerShell script that facilitates the task of having to keep up with various Zoom links and class times.
+
+![Number of GitHub Downloads badge](https://img.shields.io/github/downloads/luisegarduno/WakeUpZoom/total?color=pink&label=GitHub%20Downloads)
 
 #### What makes `WakeUpZoom!` POG?
 - Ability to easily delete scheduled zoom calls    

@@ -13,6 +13,7 @@
 WakeUpZoom! is a PowerShell script that facilitates the task of having to keep up with various Zoom links and class times.
 
 ![Number of GitHub Downloads badge](https://img.shields.io/github/downloads/luisegarduno/WakeUpZoom/total?color=pink&label=GitHub%20Downloads)
+![TotalViewsBadge](https://hitscounter.dev/api/hit?url=https%3A%2F%2Fgithub.com%2Fluisegarduno%2FWakeUpZoom&label=Total-Views&icon=&color=%236ea8fe)
 
 #### What makes `WakeUpZoom!` POG?
 - Ability to easily delete scheduled zoom calls    
